@@ -1,0 +1,246 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Tables - SB Admin</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Admin.css">
+
+
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <div class="content">
+
+
+                <div class="div3">
+                    <input type="text" placeholder="Tìm Kiếm ...">
+                    <img src="Image/loupe.png">
+
+                </div>
+
+                <div class="div5">
+                    <i class="fas fa-user-plus"></i>
+                    <p>Đăng Nhập <br> Tài khoản</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="left ">
+
+                <div class="sidebar-inner px-4 pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="../pages/dashboard/dashboard.html" class="nav-link"><span
+                                    class="sidebar-icon"><span class="fas fa-hotel"></span></span>
+                                <span>Quản lý phòng </span></a></li>
+                     
+                                <li class="nav-item active"><a href="file:///C:/Users/Administrator/Downloads/Hotel%20project-20210117T092853Z-001/Hotel%20project/room.html" class="nav-link">
+                                    <span class="sidebar-icon"><span class="fas fa-hand-holding-usd"></span></span>
+                                    <span>Quản lý các thiết bị trong phòng</span></a></li>
+
+                        <li class="nav-item active"><a href="../pages/transactions.html" class="nav-link">
+                                <span class="sidebar-icon"><span class="fas fa-hand-holding-usd"></span></span>
+                                <span>Quản lý người dùng</span></a></li>
+
+                        <li class="nav-item"><a href="../pages/settings.html" class="nav-link"><span
+                                    class="sidebar-icon"><span class="fas fa-cog"></span></span>
+                                <span>Settings</span></a></li>
+
+                        <li class="nav-item"><span
+                                class="nav-link collapsed d-flex justify-content-between align-items-center"
+                                data-toggle="collapse" data-target="#submenu-app"><span><span class="sidebar-icon"><span
+                                            class="fas fa-table"></span></span> Tables </span><span
+                                    class="link-arrow"><span class="fas fa-chevron-right"></span></span></span>
+                            <div class="multi-level collapse" role="list" id="submenu-app" aria-expanded="false">
+                                <ul class="flex-column nav">
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../pages/tables/bootstrap-tables.html"><span>Bootstrap
+                                                Tables</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+
+
+
+            </div>
+            <div class="right">
+
+                <div id="layoutSidenav_content">
+                    <div class="title">
+                        <h1>Quản lý phòng</h1>
+                    </div>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fas fa-plus mr-2"></i> Create </button>
+
+                    <table class="table">
+                        <thead class="thead-light text-center">
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>IMG</th>
+                                <th>Price</th>
+                                <th>Description</th>
+                                <th>Room Facilities</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="product_admin" class="text-center">
+                            <script src="Admin.js"></script>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"> Add rooms </h5>
+                                <button type="button" class="close" data-dismiss='modal' aria-label="close">
+                                    <span aria-hidden="true">&times; </span>
+                                </button>
+
+                            </div>
+                            <div class="modal-body">
+                                <form action="" class="form-row">
+                                    <div class="col-12 mt-3">
+                                        <input type="text" class="form-control" id="name" placeholder="Name">
+
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input type="text" class="form-control" id="img" placeholder="Img">
+
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input type="text" class="form-control" id="price" placeholder="giá">
+
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input type="text" class="form-control" id="description"
+                                            placeholder="Description">
+
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input type="text" class="form-control" id="facilities"
+                                            placeholder="Room Facilities">
+
+                                    </div>
+
+                                </form>
+                                <button href="" class="btn btn-outline-danger mt-3"
+                                    onclick="Room.addProduct()">Add</button>
+
+
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Exit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="updateProduct" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"> Update </h5>
+                                <button type="button" class="close" data-dismiss='modal' aria-label="close">
+                                    <span aria-hidden="true">&times; </span>
+                                </button>
+
+                            </div>
+                            <div class="modal-body">
+                                <form action="" class="form-row">
+                                    <div class="col-12 mt-3">
+                                        <input type="text" class="form-control" id="idd" placeholder="id">
+
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input type="text" class="form-control" id="named" placeholder="Name">
+
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input type="text" class="form-control" id="imgd" placeholder="Img">
+
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input type="text" class="form-control" id="priced" placeholder="Price">
+
+                                    </div>
+
+                                    <div class="col-12 mt-3">
+                                        <input type="text" class="form-control" id="descrip" placeholder="Description">
+
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input type="text" class="form-control" id="facili"
+                                            placeholder="Room Facilities">
+                                    </div>
+                                </form>
+                                <div id="submitUpdate">Update</div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Exit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+</body>
+
+
+</html>

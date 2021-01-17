@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>Booking Form HTML Template</title>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Cardo:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+
+
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+
+
+</head>
+
+<body>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Make your reservation</h1>
+						</div>
+						<form class="form-horizontal" id="frm-booking">
+							<input type="hidden" name="id" value="4">
+							<div class="container">
+								<div class="header">
+
+
+									<div class="form-group">
+										<h2>Thông tin khách sạn</h2>
+									</div>
+
+
+									<div class="form-group">
+										<label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Ngày nhận phòng
+											<span class="red">(*)</span></label>
+										<div class="col-xs-24 col-sm-20">
+											<div class="input-group">
+												<input id="datepicker" width="276" />
+												<script>
+													$('#datepicker').datepicker({
+														uiLibrary: 'bootstrap4'
+													});
+												</script>
+											</div>
+										</div>
+									</div>
+
+
+
+
+									<div class="form-group">
+										<label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Ngày trả
+											phòng</label>
+										<div class="col-xs-24 col-sm-20">
+											<div class="input-group">
+												<input id="datepicker2" width="276" />
+												<script>
+													$('#datepicker2').datepicker({
+														uiLibrary: 'bootstrap4'
+													});
+												</script>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Loại phòng <span
+												class="red">(*)</span></label>
+										<div class="col-xs-24 col-sm-20">
+											<select class="form-control required" name="tid">
+												<option value="7" selected="selected">DELUXE LAKE VIEW</option>
+												<option value="8">SUPERIOR GARDEN VIEW</option>
+												<option value="9">DELUXE GARDEN VIEW</option>
+												<option value="10">PREMIUM DELUXE GARDEN VIEW</option>
+												<option value="11">SUITE GARDEN VIEW</option>
+												<option value="12">PREMIUM SUITE LAKE VIEW</option>
+												<option value="13">FAMILY SUITE LAKE VIEW</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Số phòng đặt <span
+												class="red">(*)</span></label>
+										<div class="col-xs-24 col-sm-20">
+											<input type="number" name="num_booking" value="1" class="form-control"
+												id="num_booking" placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Tổng số người lớn
+										</label>
+										<div class="col-xs-24 col-sm-20">
+											<input type="number" name="num_adult" class="form-control" id="num_adult"
+												placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Tổng số trẻ em
+										</label>
+										<div class="col-xs-24 col-sm-20">
+											<input type="number" name="num_child" class="form-control" id="num_child"
+												placeholder="">
+										</div>
+									</div>
+								</div>
+								<div class="consumer">
+									<div class="form-group">
+										<h2>Thông tin của bạn</h2>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-8 col-sm-4  text-xs-lefttext-right">Giới tính <span
+												class="red">(*)</span></label>
+										<div class="col-xs-12 col-sm-20">
+											<label><input type="radio" value="1" name="gender"
+													checked="checked">Nam</label>&nbsp;&nbsp;&nbsp;&nbsp;
+											<label><input type="radio" value="0"
+													name="gender">Nữ</label>&nbsp;&nbsp;&nbsp;&nbsp;
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Họ tên <span
+												class="red">(*)</span></label>
+										<div class="col-xs-24 col-sm-20">
+											<input type="text" name="fullname" class="form-control" id="fullname"
+												placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">CMND / Hộ chiếu
+											<span class="red">(*)</span></label>
+										<div class="col-xs-24 col-sm-20">
+											<input type="text" name="cmnd" class="form-control" id="cmnd"
+												placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Số điện thoại <span
+												class="red">(*)</span></label>
+										<div class="col-xs-24 col-sm-20">
+											<input type="text" name="phone" class="form-control" id="phone"
+												placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Email <span
+												class="red">(*)</span></label>
+										<div class="col-xs-24 col-sm-20">
+											<input type="email" name="email" class="form-control" id="email"
+												placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Địa chỉ <span
+												class="red">(*)</span></label>
+										<div class="col-xs-24 col-sm-20">
+											<input type="text" name="address" class="form-control" id="address"
+												placeholder="">
+										</div>
+									</div>
+
+
+
+									<div class="form-group">
+										<label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Ghi chú</label>
+										<div class="col-xs-24 col-sm-20">
+											<textarea name="note" class="form-control"></textarea>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-xs-24 col-sm-20 text-center">
+											<input type="hidden" name="submit" value="1">
+											<button type="submit" class="btn btn-primary">Gửi thông tin</button>
+										</div>
+										<label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label"></label>
+									</div>
+
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>
