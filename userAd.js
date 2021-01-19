@@ -71,7 +71,7 @@ function userAdmin() {
       <td> ${data.email} <span style="width: 150px; "></span> </td>
       <td> ${data.address} <span style="width: 150px; "></span> </td>
       <td> ${data.role}$ </td>
-      <td> <button onclick="User.updateUser(${i})" class="btn btn-outline-danger" data-toggle="modal" data-target="#updateProduct"> <i class="fas fa-cogs"> </i></button>
+      <td> <button onclick="User.updateUser(${i})" class="btn btn-outline-danger" data-toggle="modal" data-target="#updateUser"> <i class="fas fa-cogs"> </i></button>
           <button onclick="User.deleteUser(${i})" class="btn btn-out-warning"> <i class="fas fa-trash"> </i></button>
       </td>
       

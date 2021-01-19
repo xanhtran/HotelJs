@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <h2>Danh mục các phòng</h2>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Mã phòng</th>
+                <th>Tên phòng</th>
+                <th>Đơn giá</th>
+                <th>Chọn</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="col-id">12</td>
+                <td class="col-name">SUPERIOR ROOM</td>
+                <td class="col-price">70</td>
+                <td>
+                    <button type="button" class="btn btn-success btn-choose">Chọn</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-id">13</td>
+                <td class="col-name">DELUXE ROOM</td>
+                <td class="col-price">80</td>
+                <td>
+                    <button type="button" class="btn btn-success btn-choose">Chọn</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-id">14</td>
+                <td class="col-name">PREMIUM ROOM</td>
+                <td class="col-price">100</td>
+                <td>
+                    <button type="button" class="btn btn-success btn-choose">Chọn</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-id">15</td>
+                <td class="col-name">SUITE ROOM</td>
+                <td class="col-price">110</td>
+                <td>
+                    <button type="button" class="btn btn-success btn-choose">Chọn</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-id">16</td>
+                <td class="col-name">PREMIUM SUITE</td>
+                <td class="col-price">120</td>
+                <td>
+                    <button type="button" class="btn btn-success btn-choose">Chọn</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Block 2 -->
+    <h2>Danh sách phòng trong hóa đơn</h2>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Mã phòng</th>
+                <th>Tên phòng</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+                <th>Lưu</th>
+                <th>Xóa</th>
+            </tr>
+        </thead>
+        <tbody id="bill-table">
+            <tr>
+                <td colspan="8" class="empty">Chưa chọn phòng</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+<script src="vi.js"></script>
+</html>

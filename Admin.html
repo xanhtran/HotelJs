@@ -75,18 +75,18 @@
 
                 <div class="sidebar-inner px-4 pt-3">
                     <ul class="nav flex-column">
-                        <li class="nav-item"><a href="../pages/dashboard/dashboard.html" class="nav-link"><span
+                        <li class="nav-item"><a href="../HotelJs/manageRoom.html" class="nav-link"><span
                                     class="sidebar-icon"><span class="fas fa-hotel"></span></span>
                                 <span>Quản lý phòng </span></a></li>
 
                         <li class="nav-item active">
-                            <a href="file:///C:/Users/Administrator/Downloads/Hotel%20project-20210117T092853Z-001/Hotel%20project/room.html" class="nav-link">
+                            <a href="../HotelJs/room.html" class="nav-link">
                                 <span class="sidebar-icon"><span class="fas fa-hand-holding-usd"></span></span>
                                 <span>Quản lý các thiết bị trong phòng</span></a>
                         </li>
 
                         <li class="nav-item active">
-                            <a href="../pages/transactions.html" class="nav-link">
+                            <a href="../HotelJs/userAd.html" class="nav-link">
                                 <span class="sidebar-icon"><span class="fas fa-hand-holding-usd"></span></span>
                                 <span>Quản lý người dùng</span></a>
                         </li>
@@ -117,120 +117,7 @@
             </div>
             <div class="right">
 
-                <div id="layoutSidenav_content">
-                    <div class="title">
-                        <h1>Quản lý phòng</h1>
-                    </div>
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        <i class="fas fa-plus mr-2"></i> Create </button>
-
-                    <table class="table">
-                        <thead class="thead-light text-center">
-                            <tr>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>IMG</th>
-                                <th>Price</th>
-                                <th>Description</th>
-
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="product_admin" class="text-center">
-                            <script src="Admin.js"></script>
-                        </tbody>
-                    </table>
-                </div>
-
-
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel"> Add rooms </h5>
-                                <button type="button" class="close" data-dismiss='modal' aria-label="close">
-                                    <span aria-hidden="true">&times; </span>
-                                </button>
-
-                            </div>
-                            <div class="modal-body">
-                                <form action="" class="form-row">
-                                    <div class="col-12 mt-3">
-                                        <input type="text" class="form-control" id="name" placeholder="Name">
-
-                                    </div>
-                                    <div class="col-12 mt-3">
-                                        <input type="text" class="form-control" id="img" placeholder="Img">
-
-                                    </div>
-                                    <div class="col-12 mt-3">
-                                        <input type="text" class="form-control" id="price" placeholder="giá">
-
-                                    </div>
-                                    <div class="col-12 mt-3">
-                                        <textarea type="text" class="form-control" id="description" placeholder="Description"></textarea>
-
-                                    </div>
-
-
-                                </form>
-                                <button href="" class="btn btn-outline-danger mt-3" onclick="Room.addProduct()">Add</button>
-
-
-
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Exit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal fade" id="updateProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel"> Update </h5>
-                                <button type="button" class="close" data-dismiss='modal' aria-label="close">
-                                    <span aria-hidden="true">&times; </span>
-                                </button>
-
-                            </div>
-                            <div class="modal-body">
-                                <form action="" class="form-row">
-                                    <div class="col-12 mt-3">
-                                        <input type="text" class="form-control" id="idd" placeholder="id">
-
-                                    </div>
-                                    <div class="col-12 mt-3">
-                                        <input type="text" class="form-control" id="named" placeholder="Name">
-
-                                    </div>
-                                    <div class="col-12 mt-3">
-                                        <input type="text" class="form-control" id="imgd" placeholder="Img">
-
-                                    </div>
-                                    <div class="col-12 mt-3">
-                                        <input type="text" class="form-control" id="priced" placeholder="Price">
-
-                                    </div>
-
-                                    <div class="col-12 mt-3">
-                                        <textarea type="text" class="form-control" id="descrip" placeholder="Description"></textarea>
-
-                                    </div>
-
-                                </form>
-                                <div id="submitUpdate">Update</div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Exit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+               
             </div>
 
         </div>
@@ -238,7 +125,7 @@
 
     <script>
         function dieu_huong() {
-            location.assign("file:///C:/New%20folder%20(2)/HotelJs/loginAdmin.html?#");
+            location.assign("../HotelJs/loginAdmin.html");
         }
     </script>
 

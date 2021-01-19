@@ -41,9 +41,9 @@
                                     <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Ngày nhận phòng<span class="red">(*)</span></label>
                                     <div class="col-xs-24 col-sm-20">
                                         <div class="input-group">
-                                            <input id="datepicker" width="520" value="01/17/2021" />
+                                            <input id="dateIn" width="520" value="01/17/2021" />
                                             <script>
-                                                $('#datepicker').datepicker({
+                                                $('#dateIn').datepicker({
                                                     uiLibrary: 'bootstrap4'
                                                 });
                                             </script>
@@ -58,9 +58,9 @@
                                     <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Ngày trả phòng<span class="red">(*)</span></label>
                                     <div class="col-xs-24 col-sm-20">
                                         <div class="input-group">
-                                            <input id="datepicker2" width="520" value="01/20/2021" />
+                                            <input id="dateOut" width="520" value="01/20/2021" />
                                             <script>
-                                                $('#datepicker2').datepicker({
+                                                $('#dateOut').datepicker({
                                                     uiLibrary: 'bootstrap4'
                                                 });
                                             </script>
@@ -71,23 +71,55 @@
                                     <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Loại phòng <span
                                 class="red">(*)</span></label>
                                     <div class="col-xs-24 col-sm-20">
-                                        <select class="form-control required" name="tid">
-                                <option value="7" selected="selected">DELUXE LAKE VIEW</option>
-                                <option value="8">SUPERIOR GARDEN VIEW</option>
-                                <option value="9">DELUXE GARDEN VIEW</option>
-                                <option value="10">PREMIUM DELUXE GARDEN VIEW</option>
+                                        <select class="form-control required" name="tid" id ="nameRoom">
+                                <option value="7" selected="selected">SUPERIOR ROOM</option>
+                                <option value="8">DELUXE ROOM</option>
+                                <option value="9">PREMIUM ROOM</option>
+                                <option value="10">SUITE ROOM</option>
                                 <option value="11">SUITE GARDEN VIEW</option>
-                                <option value="12">PREMIUM SUITE LAKE VIEW</option>
-                                <option value="13">FAMILY SUITE LAKE VIEW</option>
+                                <option value="12">PREMIUM SUITE</option>
+                                <option value="13">FAMILY ROOM</option>
                             </select>
                                     </div>
                                 </div>
+
+                             
 
                                 <div class="form-group">
                                     <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Số phòng đặt <span
                                 class="red">(*)</span></label>
                                     <div class="col-xs-24 col-sm-20">
                                         <input type="number" name="num_booking" value="1" class="form-control" id="num_booking" placeholder="">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Giá phòng<span class="red">(*)</span></label>
+                                    <div class="col-xs-24 col-sm-20">
+                                        <div class="input-group">
+                                            <h2>Danh sách đặt phòng</h2>
+                                            <table class="table table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>STT</th>
+                                                       
+                                                        <th>Tên phòng</th>
+                                                        <th>Đơn giá</th>
+                                                        <th>Số lượng</th>
+                                                        <th>Thành tiền</th>
+                                                        <th>Lưu</th>
+                                                        <th>Xóa</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="bill-table">
+                                                    <tr>
+                                                        <td colspan="8" class="empty">Chưa chọn phòng</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -177,7 +209,7 @@
                         </div>
                         <div class="footer">
                             <div class="form-group">
-                                <button type="button" id="button">Gửi thông tin</button>
+                                <button type="button" id="button" onclick="">Gửi thông tin</button>
                             </div>
 
                         </div>
@@ -189,5 +221,6 @@
         </div>
     </div>
 </body>
+<script src="booking.js"></script>
 
 </html>
