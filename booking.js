@@ -1,63 +1,62 @@
-
 (function() {
 
     var index = 1;
-    
+
     $('.btn-choose').on('click', choose);
     $('#bill-table').on('change keyup paste', '.bill-quantity', changeValue);
-    
+
     function choose() {
         var self = this,
             bill = $('#bill-table'),
             data = getDataMenu($(self).parent().parent()),
             html = createRow(data);
-    
+
         if (bill.find('.empty').length) {
             bill.empty();
         }
-    
+
         bill.append(html);
     }
-    
+
     function changeValue() {
         var self = this,
             row = $(self).parent().parent(),
             data = getDataBill(row);
-    
+
         row.find('.bill-total').html(calculate(data.price, data.quantity));
     }
-    
+
     function getDataMenu(row) {
-        
-            name = $(row.find('.col-name')).html(),
+
+        name = $(row.find('.col-name')).html(),
             price = $(row.find('.col-price')).html();
-    
+
         var data = {
-           
+
             name: name,
             price: price
         }
-    
+
         return data;
     }
-    
+
     function getDataBill(row) {
         var price = $(row.find('.bill-price')).html(),
             quantity = $(row.find('.bill-quantity')).val();
-    
+
         var data = {
             price: price,
             quantity: quantity
         }
-    
+
         return data;
     }
-    
+
     function createRow(data) {
         var html = '<tr>';
-    
+
         html += '<td>' + index++ + '</td>';
-       
+
         html += '<td>' + data.name + '</td>';
         html += '<td class="bill-price">' + data.price + '</td>';
         html += '<td><input type="text" value="1" class="bill-quantity" /></td>';
@@ -65,15 +64,93 @@
         html += '<td></td>';
         html += '<td></td>';
         html += '</tr>';
-    
+
         return html;
     }
-    
+
     function calculate(price, quantity) {
         return price * quantity;
     }
-    
-    })();
+
+})();
+
+
+function validate() {
+    var vdateIn = document.getElementById("dateIn").value;
+    var vdateOut = document.getElementById("dateOut").value;
+    var vnum_booking = document.getElementById("num_booking").value;
+    var vnum_adult = document.getElementById("num_adult").value;
+    var vnum_child = document.getElementById("num_child").value;
+    var vcmnd = document.getElementById("cmnd").value;
+    var vname = document.getElementById("fullname").value;
+    var vcmnd = document.getElementById("cmnd").value;
+
+    var vphone = document.getElementById("phone").value;
+    var vemail = document.getElementById("email").value;
+    var vaddress = document.getElementById("address").value;
+
+    if (vdateIn == "") {
+        alert("Vui lòng nhập ngày nhận phòng!");
+        return false;
+    }
+
+    if (vdateOut == "") {
+        alert("Vui lòng nhập ngày trả phòng!");
+        return false;
+    }
+
+    if (vnum_booking == "") {
+        alert("Vui lòng nhập số phòng mà bạn đặt!");
+        return false;
+    }
+
+    if (vnum_adult == "") {
+        alert("Vui lòng nhập số người lớn mà bạn muốn đặt!");
+        return false;
+    }
+
+    if (vnum_child == "") {
+        alert("Vui lòng nhập số trẻ em mà bạn muốn đặt!");
+        return false;
+    }
+
+    if (vname == "") {
+        alert("Vui lòng nhập lại tên!");
+        return false;
+    }
+
+    if (vcmnd == "") {
+        alert("Vui lòng nhập lại CMND!");
+        return false;
+    }
+    if (vphone == "") {
+        alert("Vui lòng nhập lại số điện thoại!");
+        return false;
+    }
+    if (vphone > 11) {
+        alert(" Vui lòng nhập số điện thoại không được vượt quá 11 số");
+        return false;
+    }
+
+    if (vaddress == "") {
+        alert("Vui lòng nhập lại địa chỉ !");
+        return false;
+    }
+
+    var aCong = vemail.indexOf("@");
+    var dauCham = vemail.lastIndexOf(".");
+    if (vemail == "") {
+        alert("Vui lòng nhập lại email!");
+        return false;
+
+    } else if ((aCong < 1) || (dauCham < aCong + 2) || (dauCham + 2 > vemail.length)) {
+        alert("Email bạn điền không chính xác");
+        return false;
+    }
+
+    alert("Bạn đã đặt phòng thành công ! Cảm ơn bạn rất nhiều.")
+    return true;
+}
 
 
 
@@ -116,16 +193,16 @@
 //     </tr>			
 //     </thead>			
 //     <tbody id="table">			
-                
+
 //     </tbody>			
 //     <tfoot>			
 //     <tr id="total">			
-                
-                
+
+
 //     </tr>			
 //     </tfoot>			
 //     </table>			
-                
+
 //     <div class="form-group">			
 //     <button onclick="completed()" class="btn btn-primary py-3 px-5">Hoàn tất</button>			
 //     </div>`;
@@ -148,7 +225,7 @@
 
 //     }
 //     var htmlTotal = `			
-                
+
 //     <td colspan="4" style="text-align: right">Tổng tiền:  ${total} VNĐ</td>			
 //     `;
 //     document.getElementById("total").innerHTML = htmlTotal;
@@ -232,6 +309,3 @@
 //     localStorage.removeItem("cart");
 //     window.location.href = "index.html";
 // }
-
-
-    

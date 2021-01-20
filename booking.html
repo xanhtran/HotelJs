@@ -41,7 +41,7 @@
                                     <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Ngày nhận phòng<span class="red">(*)</span></label>
                                     <div class="col-xs-24 col-sm-20">
                                         <div class="input-group">
-                                            <input id="dateIn" width="520" value="01/17/2021" />
+                                            <input id="dateIn" width="520" required/>
                                             <script>
                                                 $('#dateIn').datepicker({
                                                     uiLibrary: 'bootstrap4'
@@ -51,14 +51,11 @@
                                     </div>
                                 </div>
 
-
-
-
                                 <div class="form-group">
                                     <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Ngày trả phòng<span class="red">(*)</span></label>
                                     <div class="col-xs-24 col-sm-20">
                                         <div class="input-group">
-                                            <input id="dateOut" width="520" value="01/20/2021" />
+                                            <input id="dateOut" width="520" required/>
                                             <script>
                                                 $('#dateOut').datepicker({
                                                     uiLibrary: 'bootstrap4'
@@ -67,34 +64,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Loại phòng <span
-                                class="red">(*)</span></label>
-                                    <div class="col-xs-24 col-sm-20">
-                                        <select class="form-control required" name="tid" id ="nameRoom">
-                                <option value="7" selected="selected">SUPERIOR ROOM</option>
-                                <option value="8">DELUXE ROOM</option>
-                                <option value="9">PREMIUM ROOM</option>
-                                <option value="10">SUITE ROOM</option>
-                                <option value="11">SUITE GARDEN VIEW</option>
-                                <option value="12">PREMIUM SUITE</option>
-                                <option value="13">FAMILY ROOM</option>
-                            </select>
-                                    </div>
-                                </div>
 
-                             
 
                                 <div class="form-group">
                                     <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Số phòng đặt <span
                                 class="red">(*)</span></label>
                                     <div class="col-xs-24 col-sm-20">
-                                        <input type="number" name="num_booking" value="1" class="form-control" id="num_booking" placeholder="">
+                                        <input type="number" name="num_booking" class="form-control" id="num_booking" placeholder="">
                                     </div>
                                 </div>
 
 
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Giá phòng<span class="red">(*)</span></label>
                                     <div class="col-xs-24 col-sm-20">
                                         <div class="input-group">
@@ -102,14 +83,11 @@
                                             <table class="table table-bordered table-hover">
                                                 <thead>
                                                     <tr>
-                                                        <th>STT</th>
-                                                       
                                                         <th>Tên phòng</th>
                                                         <th>Đơn giá</th>
                                                         <th>Số lượng</th>
                                                         <th>Thành tiền</th>
-                                                        <th>Lưu</th>
-                                                        <th>Xóa</th>
+
                                                     </tr>
                                                 </thead>
                                                 <tbody id="bill-table">
@@ -118,10 +96,10 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                        
+
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-group">
                                     <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Tổng số người lớn </label>
                                     <div class="col-xs-24 col-sm-20">
@@ -135,13 +113,14 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Hình thức thanh toán <span
-                                class="red">(*)</span></label>
+                                    <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Hình thức thanh toán<span class="red">(*)</span></label>
                                     <div class="col-xs-24 col-sm-20">
                                         <select class="form-control required" name="tid">
-                                <option value="7" selected="selected">Thanh toán bằng chuyển khoản</option>
-                                <option value="8">Thanh toán bằng thẻ</option>
-                                </select>
+                                            <option value="7" selected="selected">Thanh toán bằng tiền mặt</option>
+                                            <option value="7" selected="selected">Thanh toán bằng chuyển khoản 
+                                                <p>  Số tài khoản: 0031003147925 (ngân hàng VietcomBank)</p> </option>
+                                            <option value="8" selected="selected">Thanh toán bằng thẻ</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -170,14 +149,14 @@
                                         <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">CMND / Hộ chiếu <span
                                     class="red">(*)</span></label>
                                         <div class="col-xs-24 col-sm-20">
-                                            <input type="text" name="cmnd" class="form-control" id="cmnd" placeholder="">
+                                            <input type="number" name="cmnd" class="form-control" id="cmnd" placeholder="">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-xs-24 col-sm-4  text-xs-leftcontrol-label">Số điện thoại <span
                                     class="red">(*)</span></label>
                                         <div class="col-xs-24 col-sm-20">
-                                            <input type="text" name="phone" class="form-control" id="phone" placeholder="">
+                                            <input type="number" name="phone" class="form-control" id="phone" placeholder="">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -209,7 +188,7 @@
                         </div>
                         <div class="footer">
                             <div class="form-group">
-                                <button type="button" id="button" onclick="">Gửi thông tin</button>
+                                <button type="button" id="button" onclick="validate()">Gửi thông tin</button>
                             </div>
 
                         </div>

@@ -67,10 +67,10 @@ function userAdmin() {
       <td>${data.name}</td>
       <td>${data.username}</td>
      
-      <td> ${data.sdt}$ </td>
+      <td> ${data.sdt}</td>
       <td> ${data.email} <span style="width: 150px; "></span> </td>
       <td> ${data.address} <span style="width: 150px; "></span> </td>
-      <td> ${data.role}$ </td>
+      <td> ${data.role} </td>
       <td> <button onclick="User.updateUser(${i})" class="btn btn-outline-danger" data-toggle="modal" data-target="#updateUser"> <i class="fas fa-cogs"> </i></button>
           <button onclick="User.deleteUser(${i})" class="btn btn-out-warning"> <i class="fas fa-trash"> </i></button>
       </td>
@@ -92,9 +92,9 @@ function save() {
 }
 
 var user = [
-    (new User("U1", "Dương", "ADuong", "093435647686", "duong.a@gmail.com", "Kon Tum", "user"))
-
-
+    (new User("U1", "Dương", "ADuong", "093435647686", "duong.a@gmail.com", "Kon Tum", "user")),
+    (new User("U2", "Hươu", "Hươu Hồ", "0983257485", "hothihuou2k1@gmail.com", "Quang tri", "admin")),
+    (new User("U3", "Xanh", "Xanh Trần", "0983256335", "tranthixanh@gmail.com", "Binh Dinh", "admin"))
 ];
 
 function load() {

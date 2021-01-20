@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
-        crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="room.css">
 </head>
+
 <body>
     <div id="layoutSidenav_content">
         <div class="title">
@@ -29,8 +30,8 @@
                     <th>Name</th>
                     <th>IMG</th>
                     <th>Price</th>
-                   
-                    
+
+
                     <th>Action</th>
                 </tr>
             </thead>
@@ -40,87 +41,85 @@
         </table>
     </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"> Add device </h5>
-                <button type="button" class="close" data-dismiss='modal' aria-label="close">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> Add device </h5>
+                    <button type="button" class="close" data-dismiss='modal' aria-label="close">
                     <span aria-hidden="true">&times; </span>
                 </button>
 
-            </div>
-            <div class="modal-body">
-                <form action="" class="form-row">
-                    <div class="col-12 mt-3">
-                        <input type="text" class="form-control" id="name" placeholder="Name">
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-row">
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control" id="name" placeholder="Name">
 
-                    </div>
-                    <div class="col-12 mt-3">
-                        <input type="text" class="form-control" id="img" placeholder="Img">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control" id="img" placeholder="Img">
 
-                    </div>
-                    <div class="col-12 mt-3">
-                        <input type="text" class="form-control" id="price" placeholder="giá">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control" id="price" placeholder="giá">
 
-                    </div>
-                  
+                        </div>
 
-                </form>
-                <button href="" class="btn btn-outline-danger mt-3"
-                    onclick="Device.addDevice()">Add</button>
 
+                    </form>
+                    <button href="" class="btn btn-outline-danger mt-3" onclick="Device.addDevice()">Add</button>
 
 
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Exit</button>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> Exit</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="modal fade" id="updateDevice" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"> Update </h5>
-                <button type="button" class="close" data-dismiss='modal' aria-label="close">
+    <div class="modal fade" id="updateDevice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> Update </h5>
+                    <button type="button" class="close" data-dismiss='modal' aria-label="close">
                     <span aria-hidden="true">&times; </span>
                 </button>
 
-            </div>
-            <div class="modal-body">
-                <form action="" class="form-row">
-                    <div class="col-12 mt-3">
-                        <input type="text" class="form-control" id="idd" placeholder="id">
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-row">
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control" id="idd" placeholder="id">
 
-                    </div>
-                    <div class="col-12 mt-3">
-                        <input type="text" class="form-control" id="named" placeholder="Name">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control" id="named" placeholder="Name">
 
-                    </div>
-                    <div class="col-12 mt-3">
-                        <input type="text" class="form-control" id="imgd" placeholder="Img">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control" id="imgd" placeholder="Img">
 
-                    </div>
-                    <div class="col-12 mt-3">
-                        <input type="text" class="form-control" id="priced" placeholder="Price">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control" id="priced" placeholder="Price">
 
-                    </div>
+                        </div>
 
-                   
-                </form>
-                <div id="submitUpdate1">Update</div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Exit</button>
+
+                    </form>
+                    <div id="submitUpdate1">Update</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> Exit</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </body>
+
 </html>
