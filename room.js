@@ -1,16 +1,16 @@
 class Device {
-    constructor(id, name, img, price) {
-        this.id = id;
-        this.name = name;
-        this.img = img;
-        this.price = price;
+    constructor(idDe, nameDe, imgDe, priceDe) {
+        this.idDe = idDe;
+        this.nameDe = nameDe;
+        this.imgDe = imgDe;
+        this.priceDe = priceDe;
 
 
     }
 
     static addDevice() {
         console.log(device.length);
-        var added = new Device("D" + parseInt(device.length + 1), document.getElementById('name').value, document.getElementById('img').value, document.getElementById('price').value);
+        var added = new Device("D" + parseInt(device.length + 1), document.getElementById('nameDe').value, document.getElementById('imgDe').value, document.getElementById('priceDe').value);
         device.push(added);
         localStorage.setItem('listDevice', JSON.stringify(device));
         save();
@@ -20,13 +20,13 @@ class Device {
     static updateDevice(i) {
 
         var k = device[i];
-        document.getElementById('idd').value = k.id;
-        document.getElementById('named').value = k.name;
-        document.getElementById('imgd').value = k.img;
-        document.getElementById('priced').value = k.price;
+        document.getElementById('idDev').value = k.idDe;
+        document.getElementById('nameDev').value = k.nameDe;
+        document.getElementById('imgDev').value = k.imgDe;
+        document.getElementById('priceDev').value = k.priceDe;
 
 
-        document.getElementById('idd').setAttribute("disabled", "disabled");
+        document.getElementById('idDev').setAttribute("disabled", "disabled");
         document.getElementById('submitUpdate1').innerHTML = '<button class="btn btn-outline-danger mt-3" onclick="Device.submitUpdate(' + i + ')"> Đồng ý </button>';
 
     }
@@ -34,9 +34,9 @@ class Device {
     static submitUpdate(i) {
         var k = device[i];
 
-        k.name = document.getElementById('named').value;
-        k.img = document.getElementById('imgd').value;
-        k.price = document.getElementById('priced').value;
+        k.nameDe = document.getElementById('nameDev').value;
+        k.imgDe = document.getElementById('imgDev').value;
+        k.priceDe = document.getElementById('priceDev').value;
 
         localStorage.setItem('listDevice', JSON.stringify(device));
         window.location.reload();
@@ -57,10 +57,10 @@ function deviceAdmin() {
         var data = device[i];
         listDevice += `
       <tr>
-      <td>${data.id}</td>
-      <td>${data.name}</td>
-      <td> <img src=" ${data.img}" style="width: 150px; "></td>
-      <td> ${data.price}$ </td>
+      <td>${data.idDe}</td>
+      <td>${data.nameDe}</td>
+      <td> <img src=" ${data.imgDe}" style="width: 150px; "></td>
+      <td> ${data.priceDe}$ </td>
     
       <td> <button onclick="Device.updateDevice(${i})" class="btn btn-outline-danger" data-toggle="modal" data-target="#updateDevice"> <i class="fas fa-cogs"> </i></button>
           <button onclick="Device.deleteDevice(${i})" class="btn btn-out-warning"> <i class="fas fa-trash"> </i></button>

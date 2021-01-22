@@ -1,18 +1,18 @@
 class User {
-    constructor(id, name, username, sdt, email, address, role) {
-        this.id = id;
-        this.name = name;
-        this.username = username;
-        this.sdt = sdt;
-        this.email = email;
-        this.address = address;
-        this.role = role;
+    constructor(idUser, nameUser, usernameUser, sdtUser, emailUser, addressUser, roleUser) {
+        this.idUser = idUser;
+        this.nameUser = nameUser;
+        this.usernameUser = usernameUser;
+        this.sdtUser = sdtUser;
+        this.emailUser = emailUser;
+        this.addressUser = addressUser;
+        this.roleUser = roleUser;
 
     }
 
     static addUser() {
         console.log(user.length);
-        var added = new User("R" + parseInt(user.length + 1), document.getElementById('name').value, document.getElementById('username').value, document.getElementById('sdt').value, document.getElementById('email').value, document.getElementById('address').value, document.getElementById('role').value);
+        var added = new User("R" + parseInt(user.length + 1), document.getElementById('nameUser').value, document.getElementById('usernameUser').value, document.getElementById('sdtUser').value, document.getElementById('emailUser').value, document.getElementById('addressUser').value, document.getElementById('roleUser').value);
         user.push(added);
         localStorage.setItem('listUser', JSON.stringify(user));
         save();
@@ -22,28 +22,28 @@ class User {
     static updateUser(i) {
 
         var k = user[i];
-        document.getElementById('idd').value = k.id;
-        document.getElementById('named').value = k.name;
-        document.getElementById('usernamed').value = k.username;
-        document.getElementById('sdted').value = k.sdt;
-        document.getElementById('emailed').value = k.email;
-        document.getElementById('addressed').value = k.address;
-        document.getElementById('roled').value = k.role;
+        document.getElementById('iddUser').value = k.idUser;
+        document.getElementById('namedUser').value = k.nameUser;
+        document.getElementById('usernamedUser').value = k.usernameUser;
+        document.getElementById('sdtedUser').value = k.sdtUser;
+        document.getElementById('emailedUser').value = k.emailUser;
+        document.getElementById('addressedUser').value = k.addressUser;
+        document.getElementById('roledUser').value = k.roleUser;
 
-        document.getElementById('idd').setAttribute("disabled", "disabled");
-        document.getElementById('submitUpdate').innerHTML = '<button class="btn btn-outline-danger mt-3" onclick="User.submitUpdate(' + i + ')"> Đồng ý </button>';
+        document.getElementById('iddUser').setAttribute("disabled", "disabled");
+        document.getElementById('submitUpdateUser').innerHTML = '<button class="btn btn-outline-danger mt-3" onclick="User.submitUpdate(' + i + ')"> Đồng ý </button>';
 
     }
 
     static submitUpdate(i) {
         var k = user[i];
 
-        k.name = document.getElementById('named').value;
-        k.username = document.getElementById('usernamed').value;
-        k.sdt = document.getElementById('sdted').value;
-        k.email = document.getElementById('emailed').value;
-        k.address = document.getElementById('addressed').value;
-        k.role = document.getElementById('roled').value;
+        k.nameUser = document.getElementById('namedUser').value;
+        k.usernameUser = document.getElementById('usernamedUser').value;
+        k.sdtUser = document.getElementById('sdtedUser').value;
+        k.emailUser = document.getElementById('emailedUser').value;
+        k.addressUser = document.getElementById('addressedUser').value;
+        k.roleUser = document.getElementById('roledUser').value;
         localStorage.setItem('listUser', JSON.stringify(user));
         window.location.reload();
 
@@ -63,14 +63,14 @@ function userAdmin() {
         var data = user[i];
         listUser += `
       <tr>
-      <td>${data.id}</td>
-      <td>${data.name}</td>
-      <td>${data.username}</td>
+      <td>${data.idUser}</td>
+      <td>${data.nameUser}</td>
+      <td>${data.usernameUser}</td>
      
-      <td> ${data.sdt}</td>
-      <td> ${data.email} <span style="width: 150px; "></span> </td>
-      <td> ${data.address} <span style="width: 150px; "></span> </td>
-      <td> ${data.role} </td>
+      <td> ${data.sdtUser}</td>
+      <td> ${data.emailUser} <span style="width: 150px; "></span> </td>
+      <td> ${data.addressUser} <span style="width: 150px; "></span> </td>
+      <td> ${data.roleUser} </td>
       <td> <button onclick="User.updateUser(${i})" class="btn btn-outline-danger" data-toggle="modal" data-target="#updateUser"> <i class="fas fa-cogs"> </i></button>
           <button onclick="User.deleteUser(${i})" class="btn btn-out-warning"> <i class="fas fa-trash"> </i></button>
       </td>
